@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD Config 3.0//EN"
+  "http://mybastis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<typeAliases>
+		<typeAlias type="bitedu.bipa.tiles.vo.BookCopy" alias="bookCopyVO"></typeAlias>
+		<typeAlias type="bitedu.bipa.tiles.vo.BoardVO" alias="BoardVO"></typeAlias>
+		<typeAlias type="bitedu.bipa.tiles.vo.MemberVO" alias="MemberVO"></typeAlias>
+	</typeAliases>
+</configuration>
