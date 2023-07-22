@@ -48,6 +48,8 @@
       
     </style>
     <title><tiles:insertAttribute name="title" /></title>
+    <link href="../resources/css/layout.css" rel="stylesheet" type="text/css" />
+    
   </head>
     <body>
     <div id="container">

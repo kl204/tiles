@@ -26,6 +26,11 @@
 		<id property ="memberSeq" column="member_seq"></id>
 		<result property ="memberId" column="member_id"/>
 		<result property ="memberPw" column="member_pw"/>
+		<result property ="memberNum" column="member_num"/>
+		<result property ="memberName" column="member_name"/>
+		<result property ="memberGender" column="member_gender"/>
+		<result property ="memberRegistDate" column="member_regist_date"/>
+		<result property ="memberGrade" column="member_grade"/>
 	</resultMap>
 	
 	

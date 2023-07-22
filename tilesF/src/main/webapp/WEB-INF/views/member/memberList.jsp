@@ -21,7 +21,7 @@ ${param.flag=='true'?"<script>alert('탈퇴성공');</script>":""}
 <c:forEach var="copy" items="${data}">
 	<tr>
 		<td>${copy.memberSeq}</td>
- 		<td>${copy.memberId}</a></td>
+ 		<td><a href="viewDetail.do?memberSeq=${copy.memberSeq}">${copy.memberId}</a></td>
 		<td>${copy.memberPw}</td>
 		<td><a href="#">삭제</a></td>
 	</tr>

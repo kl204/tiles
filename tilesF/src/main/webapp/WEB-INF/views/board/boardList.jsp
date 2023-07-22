@@ -7,8 +7,8 @@
 <head>
 	<title>방명록</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!-- <link href="../resources/css/home.css" rel="stylesheet" type="text/css">
- --></head>
+<link href="../resources/css/home.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 ${param.flag=='true'?"<script>alert('삭제성공');</script>":""}
 <table>

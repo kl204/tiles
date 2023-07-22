@@ -36,10 +36,31 @@ public class MemberController {
 		return mav;
 	}
 	
+	@RequestMapping(value="/viewDetail.do", method=RequestMethod.GET)
+	public ModelAndView viewDetail(@RequestParam int memberSeq) {
+		ModelAndView mav = null;
+		mav = new ModelAndView();
+		
+		MemberVO data = new MemberVO(); 
+		
+		//---------------------------------------------------- 회원 상세 정보 부터 해야함
+		
+		data =null;
+		
+//		data = memberService.selectAllMember(data);
+		
+		
+		mav.addObject("data",data);
+		mav.setViewName("/member/detail");
+		return mav;
+	}
+	
 	@RequestMapping(value="/viewRegist.do", method=RequestMethod.GET)
 	public ModelAndView viewRegist() {
 		ModelAndView mav = null;
 		mav = new ModelAndView();
+		
+		
 		mav.addObject("data","MemberList");
 		mav.setViewName("/member/regist");
 		return mav;

@@ -4,12 +4,60 @@
 <%@page import="java.util.ArrayList"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>    
+
+<c:set var = "contextpath" value = "<%=request.getContextPath()%>"/>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Book List</title>
-<link href="../resources/css/basic_style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+		table, td, th {
+            border : 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            width: 150px;
+            height: 50px;
+            padding: 5px;
+            font-size: 20px;
+            /* text-align: center; */
+        }
+
+        input , select {
+            font-size: 20px;
+        }
+        .data_ui {
+            /* width: 250px; */
+            height: 50px;
+        }
+
+        button {
+            font-size: 15px;
+            margin: 5px;
+        }
+        
+        
+        #sending {
+        	text-align: center;
+        }
+        
+        input.poster :disabled {
+        	background: gray;
+        }
+        
+        #form {
+        	font-size: 30px;
+        }
+        
+        #title {
+        	height: 80px;
+        	font-size: 50px;
+        }
+</style>
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
