@@ -8,4 +8,10 @@ public interface IMemberDao {
 
 	ArrayList<MemberVO> selectAllMember();
 
+	MemberVO selectDetailMember(int memberSeq);
+
+	int loginCheck(MemberVO memberVo);
+
+	int checkId(String memberId);
+
 }

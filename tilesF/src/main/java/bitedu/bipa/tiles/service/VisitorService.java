@@ -13,27 +13,7 @@ import bitedu.bipa.tiles.vo.MemberVO;
 public class VisitorService implements IVisitorService{
 	
 	@Autowired
-	private VisitorDao visiterDao;
-	
-	
-	@Override
-	public int loginCheck(MemberVO memberVo) {
-		int flag = 0;
-		
-		flag = visiterDao.loginCheck(memberVo);
-		
-		return flag;
-	}
-	
-	@Override
-	public int checkId(String memberId) {
-		int flag = 0;
-		
-		flag = visiterDao.checkId(memberId);
-		
-		return flag;
-	}
-	
+	private VisitorDao visiterDao;	
 	
 	//C : create
 	@Override
@@ -91,6 +71,18 @@ public class VisitorService implements IVisitorService{
 		flag = visiterDao.deleteText(textNums);
 		
 		return flag;
+	}
+
+	@Override
+	public int loginCheck(MemberVO memberVo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int checkId(String memberId) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	

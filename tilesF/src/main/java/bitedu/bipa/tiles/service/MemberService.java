@@ -22,4 +22,31 @@ public class MemberService implements IMemeberService{
 		
 		return list;
 	}
+	
+	@Override
+	public MemberVO selectDetailMember(int memberSeq){
+		MemberVO member = null;
+		
+		member = memberDao.selectDetailMember(memberSeq);
+		
+		return member;
+	}
+	
+	@Override
+	public int loginCheck(MemberVO memberVo) {
+		int flag = 0;
+		
+		flag = memberDao.loginCheck(memberVo);
+		
+		return flag;
+	}
+	
+	@Override
+	public int checkId(String memberId) {
+		int flag = 0;
+		
+		flag = memberDao.checkId(memberId);
+		
+		return flag;
+	}
 }

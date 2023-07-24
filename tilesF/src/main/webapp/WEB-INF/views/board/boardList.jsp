@@ -5,7 +5,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
-	<title>방명록</title>
+<meta charset="UTF-8">
+<title>방명록</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link href="../resources/css/home.css" rel="stylesheet" type="text/css">
 </head>

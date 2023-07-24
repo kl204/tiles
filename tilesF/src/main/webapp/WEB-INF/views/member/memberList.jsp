@@ -17,13 +17,14 @@
 ${param.flag=='true'?"<script>alert('탈퇴성공');</script>":""}
 <table>
 	<tr><th colspan="5" id="title">회원리스트</th></tr>
-	<tr><td id='seq'>순번</td><td>회원번호</td><td>회원이름</td><td></td></tr>
+	<tr><td id='seq'>순번</td><td>회원번호</td><td>아이디</td><td>이름</td><td>등급</td></tr>
 <c:forEach var="copy" items="${data}">
 	<tr>
 		<td>${copy.memberSeq}</td>
+		<td>${copy.memberNum}</td>
  		<td><a href="viewDetail.do?memberSeq=${copy.memberSeq}">${copy.memberId}</a></td>
-		<td>${copy.memberPw}</td>
-		<td><a href="#">삭제</a></td>
+		<td>${copy.memberName}</td>
+		<td>${copy.memberGrade}</td>
 	</tr>
 </c:forEach>
 

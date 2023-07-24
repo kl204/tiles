@@ -20,32 +20,38 @@ ${param.flag=='true'?"<script>alert('탈퇴성공');</script>":""}
 
 	<tr>
 		<td>순번</td>
- 		<td>${copy.memberSeq}</td>
+ 		<td style="width:70%">${copy.memberSeq}</td>
+
 
 	</tr>
 	<tr>
 		<td>회원번호</td>
  		<td>${copy.memberNum}</td>
 
+
 	</tr>
 	<tr>
 		<td>회원이름</td>
  		<td>${copy.memberName}</td>
+
 
 	</tr>
 	<tr>
 		<td>회원성별</td>
  		<td>${copy.memberGender}</td>
 
+
 	</tr>
 	<tr>
 		<td>회원가입일</td>
  		<td>${copy.memberRegistDate}</td>
 
+
 	</tr>
 	<tr>
 		<td>회원 등급</td>
  		<td>${copy.memberGrade}</td>
+
 
 	</tr>
 

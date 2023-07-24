@@ -138,4 +138,10 @@
 		]]>
 	</select>
 	
+		<select id="selectDetailMember" resultMap="loginMap" resultType="MemberVO" parameterType="java.lang.Integer">
+	<![CDATA[
+			select * from memberLogin where member_seq = #{memberSeq}
+		]]>
+	</select>
+	
 </mapper>

@@ -1,8 +1,11 @@
 package bitedu.bipa.tiles.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -98,7 +101,7 @@ public class VisitorController {
 	}
 	
 	@RequestMapping(value = "/regist", method = RequestMethod.POST)
-	public ModelAndView regist(@ModelAttribute BoardVO boardVo) {
+	public ModelAndView regist(@ModelAttribute BoardVO boardVo , HttpServletRequest request) {
 		ModelAndView model = new ModelAndView();
 		
 		System.out.println("regist in");
@@ -116,86 +119,6 @@ public class VisitorController {
 		model.setViewName("regist");
 		return model;
 	}
-	
-	//--------------------------  로그인 관련 ---------------------------------------------
-//	@RequestMapping(value = "/login_view", method = RequestMethod.GET)
-//	public ModelAndView login_view() {
-//		ModelAndView model = new ModelAndView();
-//
-//		model.setViewName("login");		
-//		return model;
-//	}
-//
-//	//회원가입 뷰
-//	@RequestMapping(value = "/memberRegist_view", method = RequestMethod.GET)
-//	public ModelAndView memberRegist_view() {
-//		ModelAndView model = new ModelAndView();
-//
-//		model.setViewName("memberRegist");		
-//		return model;
-//	}
-//	
-//	//아이디 중복 검사
-//	@RequestMapping(value = "/id_validation", method = RequestMethod.GET)
-//	@ResponseBody
-//	public Map<String, Object> id_validation(@RequestParam String memberId) {
-//	    Map<String, Object> response = new HashMap<String, Object>();
-//	    
-//	    System.out.println("(controller)memberId : " + memberId);
-//	    
-//	    int flag = visitorService.checkId(memberId);
-//	    
-//	    System.out.println("(controller)checkId : " + flag);
-//	    
-//	    if (flag == 1) {
-//	        response.put("result", true);
-//	    } else {
-//	        response.put("result", false);
-//	    }
-//	    
-//	    return response;
-//	}
-//	
-//	
-//	@RequestMapping(value = "/login", method = RequestMethod.POST)
-//	public ModelAndView login(@ModelAttribute MemberVO memberVo) {		
-//		ModelAndView model = new ModelAndView();	
-//		String flag = "false";
-//
-//		System.out.println("login Id : "+memberVo.getMemberId());
-//		
-//		model.addObject("flag",flag);
-//		model.addObject("memberVo",memberVo);
-//		model.setViewName("redirect:list");
-//		
-//		return model;
-//	}
-//	
-//	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-//	public ModelAndView logout(@RequestParam String flag) {		
-//		ModelAndView model = new ModelAndView();
-//			
-//		model.addObject("flag",flag);
-//		model.setViewName("redirect:login_view");
-//		
-//		return model;
-//	}
-//	
-//	
-//	@RequestMapping(value = "/list", method = RequestMethod.GET)
-//	public ModelAndView home() {
-//		ModelAndView model = new ModelAndView();
-//		String flag = "false";
-//		
-//		ArrayList<BoardVO> list = visitorService.selectAllText();
-//		
-//		model.addObject("flag",flag);
-//		model.addObject("list", list );
-//		model.setViewName("home");
-//		return model;
-//	}
-//	
-
 	
 
 }

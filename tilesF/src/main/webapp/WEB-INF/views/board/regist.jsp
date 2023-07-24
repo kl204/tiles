@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<form action="" method="post" id="frm">
+<form action="" method="post" id="frm" accept-charset="UTF-8">
 <table>
 	<thead>
 		<tr>
